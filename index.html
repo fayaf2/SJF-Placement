@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SJF Placement support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .files {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .files a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px #ccc solid;
+            text-decoration: none;
+            color: #333;
+        }
+        .files a:hover {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Public Drive Files</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="files">
+            <ul>
+                <!-- List of files will be dynamically inserted here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const files = [
+            { name: "Interview questions", link: "https://drive.google.com/drive/mobile/folders/1SkCOcAS0Kqvuz-MJkkjbFr1GSue6Ms6m" },
+            
+            // Add more files as needed
+        ];
+
+        const fileContainer = document.querySelector('.files ul');
+
+        files.forEach(file => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file.link;
+            link.target = "_blank";
+            link.textContent = file.name;
+            listItem.appendChild(link);
+            fileContainer.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
