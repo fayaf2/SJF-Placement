@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> SJF Placement support</title>
+    <title>SJF Placement Support</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,16 +39,21 @@
             background: #fff;
             margin-top: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the buttons */
         }
         .files a {
-            display: block;
-            padding: 10px;
-            border-bottom: 1px #ccc solid;
+            display: inline-block; /* Inline-block to allow margin and padding */
+            padding: 15px 30px; /* Adjust padding for button size */
+            margin: 10px; /* Margin for spacing */
+            border: 2px solid #333;
+            border-radius: 50%; /* Make it round */
             text-decoration: none;
             color: #333;
+            transition: background 0.3s, color 0.3s;
         }
         .files a:hover {
-            background: #f4f4f4;
+            background: #333;
+            color: #fff;
         }
     </style>
 </head>
@@ -68,8 +73,7 @@
 
     <script>
         const files = [
-            { name: "100+ Companies Interviews Questions with Answers", link: "https://drive.google.com/drive/mobile/folders/1SkCOcAS0Kqvuz-MJkkjbFr1GSue6Ms6m" },
-            
+            { name: "100+ Companies Interviews Questions with Answers", link: "https://drive.google.com/drive/mobile/folders/1SkCOcAS0Kqvuz-MJkkjbFr1GSue6Ms6m" }
             // Add more files as needed
         ];
 
